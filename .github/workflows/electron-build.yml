@@ -117,6 +117,8 @@ jobs:
         if: runner.os == 'Windows'
         uses: actions/upload-artifact@v4
         with:
+          retention-days: 3
+        with:
           name: windows-build
           path: |
             electron/dist/*.exe
